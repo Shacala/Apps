@@ -1,0 +1,64 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>Worklogger</groupId>
+  <artifactId>Worklogger</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>Worklogger</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+	<dependency>
+		<groupId>com.atlassian.jira</groupId>
+		<artifactId>jira-api</artifactId>
+		<version>7.1.0-QR20150924213709</version>
+		<scope>provided</scope>
+	</dependency>
+	<dependency>
+		<groupId>org.openengsb.wrapped</groupId>
+		<artifactId>com.atlassian.jira.rest.client</artifactId>
+		<version>2.0.0-m30.w1</version>
+	</dependency>
+	<dependency>
+		<groupId>org.slf4j</groupId>
+		<artifactId>slf4j-jdk14</artifactId>
+		<version>1.7.25</version>
+	</dependency>
+  </dependencies>
+  <repositories>
+		<repository>
+			<id>atlassian-public</id>
+			<name>Atlassian Repository</name>
+			<url>https://maven.atlassian.com/content/repositories/atlassian-public/</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+		 <repository>
+           <id>atlassian-public1</id>
+           <url>https://m2proxy.atlassian.com/repository/public</url>
+           <snapshots>
+             <enabled>true</enabled>
+             <updatePolicy>daily</updatePolicy>
+             <checksumPolicy>warn</checksumPolicy>
+           </snapshots>
+           <releases>
+             <enabled>true</enabled>
+             <checksumPolicy>warn</checksumPolicy>
+           </releases>
+         </repository>
+	</repositories>
+</project>
